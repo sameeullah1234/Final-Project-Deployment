@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>Scam App Detection</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Custom Stylesheet-->
+    
+    <link rel="stylesheet" href="../static/CSS/mystyles.css" />
+    
+    
+ 
+
+<body class="container">
+   
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        
+        <div class="card col-lg-7  text-center">
+          <h1 class="m-5">
+            <strong>Scam Application Detection</strong>
+          </h1>
+
+      
+
+        
+          <ul class="instructions ml-4 mr-4">
+            <li>
+              You need to copy the link of the application from the play store and paste it in the given textfield.
+
+            </li> </br>
+
+            <li>Press the analyze button.</li> </br>
+
+            </br>
+          </ul>
+
+          
+        </div>
+
+        <!-- Right Card for System Inputs -->
+        <div class="card1 col-lg-5 text-center">
+          <div>
+            <h2 class="main-head m-5">
+              <strong>Application Analysis</strong>
+            </h2>
+          </div>
+
+          
+                <label class="form-head col-lg-8 col-4 offset-lg-0 col-form-label" s>
+                Application Link
+                </label><br>
+                
+                <form method="post" action = "/result" action = "/results">
+                  
+                
+                  <div class="form-group">
+                    <input type="text" id="name" name="name" class ="form-control">
+                    <br>
+            
+                  <input type="submit" value="Analyze"> 
+                   
+                    
+
+                    
+                  </div>
+
+                  {% if name %}
+            <center>
+              <h4 style="color: rgb(207, 205, 196);" class="let_space">{{name}}</h4>
+              <h4 style="color: rgb(207, 205, 196);" class="let_space">Downloads:{{install}}</h4>
+              <h4 style="color: rgb(207, 205, 196)  ;" class="let_space">Confidence Score:{{score}}</h4>
+             
+              
+            </center> 
+
+                    {% endif %}
+
+                </form>
+
+            
+            
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+             
+          
+        </div>
+      </div>
+    </div>
+
+
+    
+
+
+
+
+    <script>
+
+
+
+
+    
+    </script>
+  </body>
+    
+</html>
+
